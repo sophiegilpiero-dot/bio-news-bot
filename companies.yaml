@@ -1,0 +1,323 @@
+# 스크리닝 대상 기업 목록
+#
+# name     : 뉴스 검색과 제목 매칭에 쓰는 대표 영문명
+# aliases  : 함께 찾을 다른 이름(옛 사명, 자회사, 약칭)
+# ko       : 텔레그램 알림에 표시할 국문명 (국내 기업)
+# ctx: true: 이름이 흔하거나 다른 뜻이 있어 오탐이 잦은 경우.
+#            제목·요약에 바이오 관련 단어(drug, FDA, trial 등)가 함께 있을 때만 알림
+#
+# 기업을 추가·삭제하려면 이 파일만 고치면 됩니다.
+
+global:
+  # --- 미국·유럽 빅파마 ---
+  - {name: Johnson & Johnson, aliases: [J&J, Janssen], ko: 존슨앤드존슨}
+  - {name: Roche, aliases: [Genentech], ko: 로슈}
+  - {name: Merck, aliases: [MSD, Merck & Co], ko: 머크(MSD)}
+  - {name: Pfizer, ko: 화이자}
+  - {name: AbbVie, ko: 애브비}
+  - {name: AstraZeneca, ko: 아스트라제네카}
+  - {name: Novartis, ko: 노바티스}
+  - {name: Bristol Myers Squibb, aliases: [Bristol-Myers Squibb, BMS], ko: BMS}
+  - {name: Eli Lilly, aliases: [Lilly], ko: 일라이릴리, ctx: true}
+  - {name: Sanofi, ko: 사노피}
+  - {name: Novo Nordisk, ko: 노보노디스크}
+  - {name: GSK, aliases: [GlaxoSmithKline], ko: GSK}
+  - {name: Amgen, ko: 암젠}
+  - {name: Gilead, aliases: [Gilead Sciences], ko: 길리어드}
+  - {name: Boehringer Ingelheim, ko: 베링거인겔하임}
+  - {name: Bayer, ko: 바이엘, ctx: true}
+  - {name: Merck KGaA, aliases: [EMD Serono], ko: 머크 KGaA}
+  - {name: Regeneron, ko: 리제네론}
+  - {name: Vertex Pharmaceuticals, aliases: [Vertex], ko: 버텍스, ctx: true}
+  - {name: Biogen, ko: 바이오젠}
+  - {name: Moderna, ko: 모더나}
+  - {name: BioNTech, ko: 바이오엔텍}
+  - {name: CSL, aliases: [CSL Behring, CSL Seqirus], ko: CSL, ctx: true}
+  - {name: Teva, aliases: [Teva Pharmaceutical], ko: 테바}
+  - {name: Viatris, ko: 비아트리스}
+  - {name: Sandoz, ko: 산도스}
+  - {name: Organon, ko: 오가논}
+  - {name: UCB, ko: UCB, ctx: true}
+  - {name: Ipsen, ko: 입센}
+  - {name: Lundbeck, ko: 룬드벡}
+  - {name: Servier, ko: 세르비에}
+  - {name: Grifols, ko: 그리폴스}
+  - {name: Menarini, ko: 메나리니}
+  - {name: Chiesi, ko: 키에지}
+  - {name: Almirall, ko: 알미랄}
+  - {name: Recordati, ko: 레코르다티}
+  - {name: Ferring, ko: 페링}
+  - {name: Hikma, ko: 히크마}
+  - {name: Bausch Health, ko: 바슈헬스}
+  - {name: Jazz Pharmaceuticals, ko: 재즈}
+  - {name: Lonza, ko: 론자}
+  - {name: Evotec, ko: 에보텍}
+  # --- 일본 ---
+  - {name: Takeda, ko: 다케다}
+  - {name: Astellas, ko: 아스텔라스}
+  - {name: Daiichi Sankyo, ko: 다이이찌산쿄}
+  - {name: Otsuka, ko: 오츠카}
+  - {name: Eisai, ko: 에자이}
+  - {name: Chugai, ko: 주가이}
+  - {name: Ono Pharmaceutical, ko: 오노약품}
+  - {name: Shionogi, ko: 시오노기}
+  - {name: Kyowa Kirin, ko: 쿄와기린}
+  - {name: Sumitomo Pharma, ko: 스미토모파마}
+  - {name: Mitsubishi Tanabe, ko: 미쓰비시다나베}
+  # --- 중국 ---
+  - {name: Hengrui, aliases: [Jiangsu Hengrui], ko: 항서제약}
+  - {name: BeOne Medicines, aliases: [BeiGene], ko: 베이진(BeOne)}
+  - {name: WuXi AppTec, ko: 우시앱텍}
+  - {name: WuXi Biologics, ko: 우시바이오로직스}
+  - {name: Innovent, aliases: [Innovent Biologics], ko: 이노벤트}
+  - {name: Hansoh, aliases: [Hansoh Pharma], ko: 한소제약}
+  - {name: Sino Biopharm, aliases: [Sino Biopharmaceutical], ko: 시노바이오팜}
+  - {name: CSPC, ko: CSPC}
+  - {name: Akeso, ko: 아케소}
+  - {name: Kelun-Biotech, aliases: [Kelun Biotech, Sichuan Kelun], ko: 켈룬바이오텍}
+  - {name: Hutchmed, ko: 허치메드}
+  - {name: Zai Lab, ko: 자이랩}
+  - {name: Legend Biotech, ko: 레전드바이오텍}
+  # --- 인도 ---
+  - {name: Sun Pharma, aliases: [Sun Pharmaceutical], ko: 선파마}
+  - {name: Dr. Reddy's, aliases: [Dr Reddy's], ko: 닥터레디스}
+  - {name: Cipla, ko: 시플라}
+  - {name: Lupin, ko: 루핀, ctx: true}
+  - {name: Aurobindo, ko: 오로빈도}
+  - {name: Zydus, ko: 자이더스}
+  # --- 글로벌 대형 바이오텍 ---
+  - {name: Alnylam, ko: 앨나일람}
+  - {name: argenx, ko: 아젠엑스}
+  - {name: Genmab, ko: 젠맙}
+  - {name: Ascendis Pharma, aliases: [Ascendis], ko: 아센디스}
+  - {name: Incyte, ko: 인사이트}
+  - {name: BioMarin, ko: 바이오마린}
+  - {name: Neurocrine, aliases: [Neurocrine Biosciences], ko: 뉴로크라인}
+  - {name: United Therapeutics, ko: 유나이티드테라퓨틱스}
+  - {name: Exelixis, ko: 엑셀리시스}
+  - {name: Sarepta, ko: 사렙타}
+  - {name: Ionis, ko: 아이오니스}
+  - {name: BridgeBio, ko: 브릿지바이오}
+  - {name: Insmed, ko: 인스메드}
+  - {name: Summit Therapeutics, ko: 서밋테라퓨틱스}
+  - {name: Madrigal, ko: 마드리갈}
+  - {name: Revolution Medicines, ko: 레볼루션메디슨}
+  - {name: Cytokinetics, ko: 사이토키네틱스}
+  - {name: Axsome, ko: 액섬}
+  - {name: Apellis, ko: 아펠리스}
+  - {name: Halozyme, ko: 할로자임}
+  - {name: Roivant, ko: 로이반트}
+  - {name: Viking Therapeutics, ko: 바이킹테라퓨틱스}
+  - {name: Abivax, ko: 아비박스}
+  - {name: Biohaven, ko: 바이오헤이븐}
+  - {name: Ultragenyx, ko: 울트라제닉스}
+  - {name: Krystal Biotech, ko: 크리스탈바이오텍}
+  - {name: Novavax, ko: 노바백스}
+  - {name: Bavarian Nordic, ko: 바바리안노르딕}
+
+korea:
+  # --- 대형 바이오·CDMO ---
+  - {ko: 삼성바이오로직스, name: Samsung Biologics}
+  - {ko: 삼성바이오에피스, name: Samsung Bioepis}
+  - {ko: 삼성에피스홀딩스, name: Samsung Epis Holdings}
+  - {ko: 셀트리온, name: Celltrion}
+  - {ko: 셀트리온제약, name: Celltrion Pharm}
+  - {ko: SK바이오팜, name: SK biopharmaceuticals, aliases: [SK Biopharm]}
+  - {ko: SK바이오사이언스, name: SK bioscience}
+  - {ko: SK케미칼, name: SK chemicals}
+  - {ko: SK플라즈마, name: SK plasma}
+  - {ko: SK팜테코, name: SK pharmteco}
+  - {ko: 롯데바이오로직스, name: Lotte Biologics}
+  - {ko: CJ바이오사이언스, name: CJ Bioscience}
+  - {ko: LG화학, name: LG Chem, ctx: true}
+  # --- 전통 제약사 ---
+  - {ko: 유한양행, name: Yuhan}
+  - {ko: 한미약품, name: Hanmi Pharmaceutical, aliases: [Hanmi Pharm, Hanmi]}
+  - {ko: 한미사이언스, name: Hanmi Science}
+  - {ko: GC녹십자, name: GC Biopharma, aliases: [Green Cross]}
+  - {ko: GC셀, name: GC Cell}
+  - {ko: 대웅제약, name: Daewoong Pharmaceutical, aliases: [Daewoong]}
+  - {ko: 종근당, name: Chong Kun Dang, aliases: [CKD Pharm]}
+  - {ko: 종근당바이오, name: CKD Bio, aliases: [Chong Kun Dang Bio]}
+  - {ko: HK이노엔, name: HK inno.N, aliases: [HK innoN, HK Inno.N]}
+  - {ko: 보령, name: Boryung}
+  - {ko: 동아에스티, name: Dong-A ST}
+  - {ko: 에스티팜, name: ST Pharm}
+  - {ko: 일동제약, name: Ildong Pharmaceutical, aliases: [Ildong]}
+  - {ko: 유노비아, name: Yunovia}
+  - {ko: 아이디언스, name: IDience}
+  - {ko: JW중외제약, name: JW Pharmaceutical}
+  - {ko: JW생명과학, name: JW Life Science}
+  - {ko: 제일약품, name: Jeil Pharmaceutical}
+  - {ko: 온코닉테라퓨틱스, name: Onconic Therapeutics}
+  - {ko: 광동제약, name: Kwang Dong Pharmaceutical, aliases: [Kwangdong Pharmaceutical]}
+  - {ko: 동국제약, name: Dongkook Pharmaceutical}
+  - {ko: 휴온스, name: Huons}
+  - {ko: 휴메딕스, name: Humedix}
+  - {ko: 대원제약, name: Daewon Pharmaceutical}
+  - {ko: 한독, name: Handok}
+  - {ko: 부광약품, name: Bukwang Pharmaceutical, aliases: [Bukwang]}
+  - {ko: 삼진제약, name: Samjin Pharmaceutical}
+  - {ko: 현대약품, name: Hyundai Pharm, ctx: true}
+  - {ko: 국제약품, name: Kukje Pharma}
+  - {ko: 일양약품, name: Il-Yang Pharmaceutical, aliases: [Ilyang Pharmaceutical]}
+  - {ko: 영진약품, name: Yungjin Pharm}
+  - {ko: 신풍제약, name: Shin Poong Pharmaceutical, aliases: [Shinpoong Pharm]}
+  - {ko: 안국약품, name: Ahngook Pharmaceutical}
+  - {ko: 경보제약, name: Kyongbo Pharmaceutical}
+  - {ko: 동화약품, name: Dongwha Pharm}
+  - {ko: 삼일제약, name: Samil Pharmaceutical}
+  - {ko: 환인제약, name: Whanin Pharm}
+  - {ko: 명인제약, name: Myungin Pharm}
+  - {ko: 하나제약, name: Hana Pharm}
+  - {ko: 대한뉴팜, name: Daehan New Pharm}
+  - {ko: 삼아제약, name: Sama Pharm}
+  - {ko: 비씨월드제약, name: BCWorld Pharm}
+  - {ko: 대화제약, name: Daehwa Pharmaceutical}
+  - {ko: 한국유나이티드제약, name: Korea United Pharm}
+  - {ko: 이연제약, name: Reyon Pharmaceutical}
+  - {ko: 동구바이오제약, name: Dongkoo Bio & Pharma}
+  - {ko: 경동제약, name: Kyungdong Pharm}
+  - {ko: 삼천당제약, name: Samchundang Pharm}
+  - {ko: 한올바이오파마, name: HanAll Biopharma}
+  - {ko: 삼양홀딩스(바이오), name: Samyang Biopharm, aliases: [Samyang Biopharmaceuticals]}
+  - {ko: 파마리서치, name: Pharma Research, ctx: true}
+  - {ko: 휴젤, name: Hugel}
+  - {ko: 메디톡스, name: Medytox}
+  - {ko: 코오롱생명과학, name: Kolon Life Science}
+  - {ko: 코오롱티슈진, name: Kolon TissueGene}
+  - {ko: 바이넥스, name: Binex}
+  - {ko: 유바이오로직스, name: EuBiologics}
+  - {ko: 프레스티지바이오파마, name: Prestige BioPharma}
+  - {ko: 프레스티지바이오로직스, name: Prestige Biologics}
+  - {ko: 에이프로젠, name: Aprogen}
+  - {ko: 이수앱지스, name: ISU Abxis}
+  - {ko: 차바이오텍, name: CHA Biotech}
+  - {ko: 차백신연구소, name: Cha Vaccine Institute}
+  # --- HLB 그룹 ---
+  - {ko: HLB, name: HLB, ctx: true}
+  - {ko: HLB테라퓨틱스, name: HLB Therapeutics}
+  - {ko: HLB생명과학, name: HLB Life Science}
+  - {ko: HLB제약, name: HLB Pharmaceutical}
+  # --- 플랫폼·신약 바이오텍 ---
+  - {ko: 알테오젠, name: Alteogen}
+  - {ko: 리가켐바이오, name: LigaChem Biosciences, aliases: [LigaChem, LegoChem Biosciences, LegoChem]}
+  - {ko: 에이비엘바이오, name: ABL Bio, aliases: [ABL Bio Inc]}
+  - {ko: 펩트론, name: Peptron}
+  - {ko: 오름테라퓨틱, name: Orum Therapeutics}
+  - {ko: 보로노이, name: Voronoi, ctx: true}
+  - {ko: 디앤디파마텍, name: D&D Pharmatech}
+  - {ko: 지아이이노베이션, name: GI Innovation}
+  - {ko: 브릿지바이오테라퓨틱스, name: Bridge Biotherapeutics}
+  - {ko: 올릭스, name: OliX Pharmaceuticals, aliases: [OliX]}
+  - {ko: 에이프릴바이오, name: AprilBio}
+  - {ko: 지놈앤컴퍼니, name: Genome & Company}
+  - {ko: 셀리드, name: Cellid}
+  - {ko: 제넥신, name: Genexine}
+  - {ko: 툴젠, name: ToolGen}
+  - {ko: 앱클론, name: AbClon}
+  - {ko: 큐리언트, name: Qurient}
+  - {ko: 큐라클, name: Curacle}
+  - {ko: 압타바이오, name: Aptabio}
+  - {ko: 나이벡, name: Nibec}
+  - {ko: 엔지켐생명과학, name: Enzychem Lifesciences, aliases: [Enzychem]}
+  - {ko: 메지온, name: Mezzion Pharma, aliases: [Mezzion]}
+  - {ko: 신라젠, name: SillaJen}
+  - {ko: 헬릭스미스, name: Helixmith}
+  - {ko: CG인바이츠, name: CG Invites, aliases: [CrystalGenomics]}
+  - {ko: 강스템바이오텍, name: Kangstem Biotech}
+  - {ko: 메디포스트, name: Medipost}
+  - {ko: 파미셀, name: Pharmicell}
+  - {ko: 안트로젠, name: Anterogen}
+  - {ko: 네이처셀, name: Nature Cell, ctx: true}
+  - {ko: 박셀바이오, name: VaxCell-Bio, aliases: [VaxCell Bio]}
+  - {ko: 아이진, name: EyeGene}
+  - {ko: 유틸렉스, name: Eutilex}
+  - {ko: 네오이뮨텍, name: NeoImmuneTech}
+  - {ko: 카나리아바이오, name: Canaria Bio}
+  - {ko: 티움바이오, name: Tiumbio}
+  - {ko: 이뮨온시아, name: ImmuneOncia}
+  - {ko: 카이노스메드, name: Kainos Medicine}
+  - {ko: 퓨쳐켐, name: FutureChem}
+  - {ko: 셀비온, name: Cellbion}
+  - {ko: 비보존, name: Vivozon}
+  - {ko: 인벤티지랩, name: Inventage Lab}
+  - {ko: 지투지바이오, name: G2GBio}
+  - {ko: 아델, name: ADEL, aliases: [Adel Inc], ctx: true}
+  - {ko: 아리바이오, name: AriBio}
+  - {ko: 지엔티파마, name: GNT Pharma}
+  - {ko: 코아스템켐온, name: Corestemchemon, aliases: [Corestem]}
+  - {ko: 샤페론, name: Shaperon}
+  - {ko: 파로스아이바이오, name: Pharos iBio}
+  - {ko: 온코크로스, name: Oncocross}
+  - {ko: 신테카바이오, name: Syntekabio}
+  - {ko: 스탠다임, name: Standigm}
+  - {ko: 에이비온, name: Abion, ctx: true}
+  - {ko: 젬백스, name: GemVax}
+  - {ko: 넥스트바이오메디컬, name: Next Biomedical}
+  - {ko: SCM생명과학, name: SCM Lifescience}
+  - {ko: 큐로셀, name: Curocell}
+  - {ko: 엑셀세라퓨틱스, name: Xcell Therapeutics}
+  - {ko: 이엔셀, name: ENCell}
+  - {ko: 에스바이오메딕스, name: S.Biomedics}
+  - {ko: 지아이셀, name: GI Cell}
+  - {ko: 프로티나, name: Proteina}
+  - {ko: 노브메타파마, name: Novmetapharma}
+  - {ko: 인투셀, name: Intocell}
+  - {ko: 에임드바이오, name: AimedBio}
+  - {ko: 알지노믹스, name: Rznomics}
+  - {ko: 오스코텍, name: Oscotec}
+  - {ko: 제노스코, name: Genosco}
+  - {ko: 와이바이오로직스, name: Y-Biologics}
+  - {ko: 파멥신, name: PharmAbcine}
+  - {ko: 바이젠셀, name: ViGenCell}
+  - {ko: 뉴라클사이언스, name: Neuracle Science}
+  - {ko: 고바이오랩, name: KoBioLabs}
+  - {ko: 퓨처메디신, name: Future Medicine, ctx: true}
+  - {ko: 바이오오케스트라, name: Bio Orchestra, aliases: [BioOrchestra]}
+  - {ko: 엔솔바이오사이언스, name: Ensol Biosciences}
+  - {ko: 압타머사이언스, name: Aptamer Sciences}
+  - {ko: 엠디뮨, name: MDimune}
+  - {ko: 앱티스, name: Aptis, ctx: true}
+  - {ko: 피노바이오, name: Pinotbio}
+  - {ko: 노벨티노빌리티, name: Novelty Nobility}
+  - {ko: 큐라티스, name: Quratis}
+  - {ko: SL백시젠, name: SL VaxiGen}
+  - {ko: 오가노이드사이언스, name: Organoid Sciences}
+  - {ko: 엑소코바이오, name: ExoCoBio}
+  - {ko: 일리아스바이오로직스, name: ILIAS Biologics}
+  - {ko: 브렉소젠, name: Brexogen}
+  - {ko: 진코어, name: GenKOre}
+  - {ko: 메드팩토, name: MedPacto}
+  - {ko: 인트론바이오, name: iNtRON Biotechnology, aliases: [iNtRON Bio]}
+  - {ko: 테고사이언스, name: Tego Science}
+  - {ko: 엘앤씨바이오, name: L&C Bio}
+  - {ko: 에스티큐브, name: STCube}
+  - {ko: 진원생명과학, name: GeneOne Life Science}
+  - {ko: 지씨지놈, name: GC Genome}
+  - {ko: 아이엠바이오로직스, name: IMBiologics}
+  - {ko: 에이치이엠파마, name: HEM Pharma}
+  - {ko: 쓰리빌리언, name: 3billion}
+  - {ko: 셀레믹스, name: Celemics}
+  - {ko: 디엑스앤브이엑스, name: DXVX}
+  - {ko: 지노믹트리, name: Genomictree}
+  # --- 진단·AI 헬스케어·CRO ---
+  - {ko: 씨젠, name: Seegene}
+  - {ko: SD바이오센서, name: SD Biosensor}
+  - {ko: 루닛, name: Lunit}
+  - {ko: 뷰노, name: Vuno, ctx: true}
+  - {ko: 제이엘케이, name: JLK, ctx: true}
+  - {ko: 뉴로핏, name: Neurophet}
+  - {ko: 마크로젠, name: Macrogen}
+  - {ko: 랩지노믹스, name: LabGenomics}
+  - {ko: 젠큐릭스, name: Gencurix}
+  - {ko: 엔젠바이오, name: NGeneBio}
+  - {ko: 테라젠이텍스, name: Theragen Etex}
+  - {ko: 아이엠비디엑스, name: IMBdx}
+  - {ko: 바이오노트, name: Bionote}
+  - {ko: 바이오니아, name: Bioneer}
+  - {ko: 수젠텍, name: Sugentech}
+  - {ko: 바디텍메드, name: Boditech Med}
+  - {ko: 이오플로우, name: EOFlow}
+  - {ko: 디티앤씨알오, name: DT&CRO}
+  - {ko: 씨엔알리서치, name: C&R Research}

@@ -1,0 +1,78 @@
+# 뉴스 수집 설정
+
+settings:
+  # 이 시간(시간 단위)보다 오래된 기사는 보내지 않음.
+  # 2시간 주기지만 GitHub Actions 실행이 밀릴 수 있어 여유를 둠. 중복은 sent.json으로 걸러짐.
+  lookback_hours: 6
+  # 보낸 기사 기록을 며칠간 보관할지
+  keep_days: 14
+  # 새 기사가 없을 때도 "새 소식 없음" 메시지를 보낼지
+  send_when_empty: false
+
+# 1) 구글 뉴스 검색 (영문, 미국판): 기업명을 묶어서 검색
+google_news:
+  enabled: true
+  # 한 번에 OR로 묶을 검색어 최대 길이(문자)
+  max_query_chars: 350
+  # 요청 사이 대기(초) — 차단 방지
+  delay_seconds: 1.5
+
+# 2) 해외 바이오 전문지 RSS: 새 기사 중 대상 기업이 제목·요약에 나온 것만 보냄
+feeds:
+  - {name: Fierce Biotech, url: "https://www.fiercebiotech.com/rss/xml"}
+  - {name: Fierce Pharma, url: "https://www.fiercepharma.com/rss/xml"}
+  - {name: Endpoints News, url: "https://endpoints.news/feed/"}
+  - {name: BioPharma Dive, url: "https://www.biopharmadive.com/feeds/news/"}
+  - {name: STAT, url: "https://www.statnews.com/feed/"}
+  - {name: GEN, url: "https://www.genengnews.com/feed/"}
+
+# ctx: true 기업에 요구하는 바이오 관련 단어 (제목·요약에 하나 이상 있어야 함)
+context_words:
+  - drug
+  - drugs
+  - pharma
+  - pharmaceutical
+  - biotech
+  - biologic
+  - biosimilar
+  - FDA
+  - EMA
+  - MFDS
+  - approval
+  - approves
+  - approved
+  - trial
+  - Phase
+  - clinical
+  - patient
+  - therapy
+  - therapeutic
+  - treatment
+  - vaccine
+  - antibody
+  - ADC
+  - cancer
+  - oncology
+  - obesity
+  - GLP-1
+  - license
+  - licensing
+  - deal
+  - acquisition
+  - acquire
+  - merger
+  - patent
+  - CDMO
+  - manufacturing
+  - pipeline
+  - shares
+  - stock
+  - earnings
+  - revenue
+  - sales
+  - IPO
+  - medicine
+  - healthcare
+  - diagnostic
+  - Korea
+  - Korean
